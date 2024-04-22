@@ -4,7 +4,7 @@ import 'package:flame/game.dart';
 import 'game.dart';
 
 class MainGamePage extends StatefulWidget {
-  const MainGamePage({Key? key}) : super(key: key);
+  const MainGamePage({super.key});
 
   @override
   MainGameState createState() => MainGameState();
@@ -16,11 +16,9 @@ class MainGameState extends State<MainGamePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-          children: [
-            GameWidget(game: game),
-          ],
-        )
+      body: GameWidget(
+        game: game,
+      ),
     );
   }
 }

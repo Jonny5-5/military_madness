@@ -3,11 +3,11 @@ import 'main_game_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const App());
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
