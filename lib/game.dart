@@ -17,22 +17,5 @@ class MainGame extends FlameGame with HasGameRef, TapDetector {
     );
 
     add(mapComponent);
-
-    // final flameIsometric = await FlameIsometric.create(
-    //   tileMap: 'tile_map.png',
-    //   tmx: 'tiles/level1.tmx',
-    // );
-
-    // for (var i = 0; i < flameIsometric.layerLength; i++) {
-    //   add(
-    //     IsometricTileMapComponent(
-    //       flameIsometric.tileset,
-    //       flameIsometric.matrixList[i],
-    //       destTileSize: flameIsometric.srcTileSize,
-    //       position:
-    //           Vector2(gameSize.x / 2, flameIsometric.tileHeight.toDouble()),
-    //     ),
-    //   );
-    // }
   }
 }
