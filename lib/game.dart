@@ -80,15 +80,17 @@ class MainGame extends FlameGame with ScaleDetector, TapDetector {
     var xTranslate = 0.0;
     var yTranslate = 0.0;
 
+    // TODO: This only works when the screen is in portrait mode
+
     if (worldRect.topLeft.dx < 0.0) {
       xTranslate = -worldRect.topLeft.dx;
     } else if (worldRect.bottomRight.dx > mapSize.dx) {
       xTranslate = mapSize.dx - worldRect.bottomRight.dx;
     }
 
-    if (worldRect.topLeft.dy < 0.0) {
+    if (worldRect.topLeft.dy > 0.0) {
       yTranslate = -worldRect.topLeft.dy;
-    } else if (worldRect.bottomRight.dy > mapSize.dy) {
+    } else if (worldRect.bottomRight.dy < mapSize.dy) {
       yTranslate = mapSize.dy - worldRect.bottomRight.dy;
     }
 

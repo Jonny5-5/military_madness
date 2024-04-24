@@ -4,8 +4,10 @@ import 'package:military_madness/game.dart';
 
 void main() {
   runApp(
-    GameWidget(
-      game: MainGame(),
+    SafeArea(
+      child: GameWidget(
+        game: MainGame(),
+      ),
     ),
   );
 }
